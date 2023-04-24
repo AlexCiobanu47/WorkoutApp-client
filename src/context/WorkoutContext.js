@@ -12,14 +12,14 @@ export const workoutsReducer = (state, action) => {
         workouts: [action.payload, ...state.workouts],
       };
     default:
-      return {
-        workouts: [...state.workouts],
-      };
+      return state;
   }
 };
 export const WorkoutContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(workoutsReducer, { workouts: null });
-
-  dispatch({ type: "SET_WORKOUTS", payload: [{}, {}] });
-  return <WorkoutsContext.Provider>{children}</WorkoutsContext.Provider>;
+  return (
+    <WorkoutsContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </WorkoutsContext.Provider>
+  );
 };
