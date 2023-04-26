@@ -10,7 +10,7 @@ const WorkoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const workout = { title, load, reps };
-    const response = await fetch("/api/v1/workouts", {
+    const response = await fetch("http://16.16.126.137:4000/api/v1/workouts", {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {

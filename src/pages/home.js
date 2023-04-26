@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch("/api/v1/workouts");
+      const response = await fetch("http://16.16.126.137:4000/api/v1/workouts");
       const json = await response.json();
       if (response.ok) {
         dispatch({ type: "SET_WORKOUTS", payload: json });
