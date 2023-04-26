@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/WorkoutApp-client/static/css/main.1c515846.css",
-    "main.js": "/WorkoutApp-client/static/js/main.499f1452.js",
+    "main.js": "/WorkoutApp-client/static/js/main.6dbb1eaa.js",
     "index.html": "/WorkoutApp-client/index.html",
     "main.1c515846.css.map": "/WorkoutApp-client/static/css/main.1c515846.css.map",
-    "main.499f1452.js.map": "/WorkoutApp-client/static/js/main.499f1452.js.map"
+    "main.6dbb1eaa.js.map": "/WorkoutApp-client/static/js/main.6dbb1eaa.js.map"
   },
   "entrypoints": [
     "static/css/main.1c515846.css",
-    "static/js/main.499f1452.js"
+    "static/js/main.6dbb1eaa.js"
   ]
 }
