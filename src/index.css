@@ -1,64 +1,83 @@
-:root{
-    --main-bg-color: white;
-    --main-text-color: black;
-    --main-border: black;
-    --error-color: red;
-    --delete: red;
+:root {
+  --main-bg-color: white;
+  --main-text-color: #0e5a0e;
+  --secondary-text-color: black;
+  --main-border: black;
+  --error-color: red;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+}
+.navbar-container {
+  background-color: var(--main-bg-color);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--main-border);
+}
+.navbar-link {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+.home {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
 }
 
-.navbar-container{
-    background-color: var(--main-bg-color);
-    margin: 0;
-    padding: 0;
-}
-.navbar-link{
-    color: var(--main-text-color);
-    text-decoration: none;    
-}
-.home{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 100px;
-}
-input.error{
-    border: 5px solid var(--error-color);
-}
 /*home display*/
-.workout-details{
-    padding: 2rem;
-    border: 1px solid var(--main-border);
-    border-radius: 1rem;
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1fr 0.1fr;
-    justify-content: center;
-    align-items: center;
+.workout-details {
+  padding: 2rem;
+  border: 1px solid var(--main-border);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  align-items: center;
 }
-.workout-details h4{
-    margin: 0 0 0 2rem;
-    font-size: 1.2em;
-    color:var(--main-text-color)
+.workout-details h4 {
+  font-size: 1.2em;
+  color: var(--main-text-color);
 }
-.workout-details p{
-    margin: 0;
-    font-size: 0.9em;
-    color: var(--main-text-color);
+.workout-details p {
+  font-size: 0.9em;
+  color: var(--secondary-text-color);
 }
-.workout-details span{
-    margin-right: 1rem;
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid var(--main-border);
-    background-color: var(--delete);
-    border-radius: 50%;
+.workout-details span {
+  margin-right: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid var(--main-border);
+  border-radius: 50%;
+}
+.workout-details span:hover {
+  background-color: var(--error-color);
 }
 /*form*/
-.create-workout{
-    padding: 3rem;
-    margin-right: 10rem;
-    border: 1px solid black;
-    border-radius: 1rem;
+.create-workout {
+  margin-right: 10rem;
 }
-.form-submit-btn{
-    margin-top: 1rem;
+.form-submit-btn {
+  background-color: var(--main-text-color);
+  color: white;
+  border: 0;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+form h3 {
+  color: var(--main-text-color);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+input,
+label {
+  display: block;
+}
+/*form error*/
+input.error {
+  border: 2px solid var(--error-color);
 }
